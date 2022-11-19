@@ -1,0 +1,191 @@
+.content {
+    display: flex;
+    height: 1000px;
+    padding: 60px 60px 0 60px;
+}
+
+/* Recently Played */
+
+.left-side {
+    float: left;
+    width: 70%;
+    padding: 15px;
+}
+
+.RecentlyPlayed {
+    width: auto;
+    height: auto;
+    /* background-color: black; */
+    padding-right: 15px;
+}
+
+.section {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: scroll;
+    padding-top: 15px;
+    scroll-snap-type: x mandatory;
+    width: 900px;
+}
+
+.section li {
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+    height: 250px;
+    margin: 0 10px;
+}
+
+.scrollbar {
+    background-color: #F5F5F5;
+    float: left;
+    height: 275px;
+    overflow-x: scroll;
+}
+
+#style-1::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+}
+
+.picture {
+    width: 40px;
+    height: 40px;
+}
+
+.anh {
+    background-color: #000;
+    width: auto;
+    height: 200px;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.section .info .description {
+    text-overflow: ellipsis;
+}
+
+
+/* More of what you like */
+.MoreOfWhatYouLike {
+    width: 65% !important;
+    /* background-color: black; */
+    margin-top: 320px;
+    padding-right: 15px;
+}
+
+/* Sidebar */
+.right-side {
+    display: inline-block;
+    width: auto;
+    padding-top: 15px;
+    height: 1000px;
+    /* background-color: #000; */
+}
+
+
+/* New tracks */
+.section-nt {
+    display: flex;
+}
+
+.section-nt li {
+    display: inline-block;
+    padding: 15px 3px 15px 0;
+}
+
+.avatar-nt {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+/* Artist you should follow */
+
+.ArtistYouShouldFollow {
+    width: auto;
+
+}
+
+.ArtistYouShouldFollow .section-at {
+    display: flex;
+    padding-top: 10px;
+    /* width: 300px; */
+}
+
+.ArtistYouShouldFollow .section-at li {
+    display: block;
+    padding: 5px 3px 5px 0;
+}
+
+.ArtistYouShouldFollow .avatar {
+    display: inline-block;
+}
+
+
+.ArtistYouShouldFollow .listArtist {
+    display: flex;
+    width: 300px;
+}
+
+.ArtistYouShouldFollow .avatar-at {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+.ArtistYouShouldFollow .artist {
+    display: inline-block;
+    padding-left: 5px;
+}
+
+.ArtistYouShouldFollow .follow {
+    float: right;
+}
+
+/* like */
+.like {
+    width: auto;
+}
+
+.like .section-l {
+    display: flex;
+    padding-top: 10px;
+    /* width: 300px; */
+}
+
+.like .section-l li {
+    display: block;
+    padding: 5px 0px;
+}
+
+.like .listSong {
+    display: flex;
+    width: 300px;
+}
+
+.like .avatar {
+    display: block;
+}
+
+.like .avatar-l {
+    width: 70px;
+    height: 60px;
+    background-color: #000;
+}
+
+.like .song {
+    display: block;
+    padding-left: 5px;
+}
+
+/* .like .follow {
+    float: right;
+} */

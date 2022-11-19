@@ -1,3 +1,6 @@
+import { renderToString } from "react-dom/server";
+import { ServerStyleSheet } from "styled-components";
+
 const { PassThrough } = require("stream");
 
 const { Response } = require("@remix-run/node");
@@ -16,6 +19,22 @@ export default function handleRequest(
   responseHeaders,
   remixContext
 ) {
+  const sheet = new ServerStyleSheet();
+
+  let markup = renderToString(
+    sheet.collectStyles(
+      <RemixServer context={remixContext} url={request.url} />
+    )
+  );
+  const styles = sheet.getStyleTags();
+  markup = markup.replace("__STYLES__", styles);
+  responseHeaders.set("Content-Type", "text/html");
+
+  return new Response("<!DOCTYPE html>" + markup, {
+    status: responseStatusCode,
+    headers: responseHeaders,
+  });
+
   return isbot(request.headers.get("user-agent"))
     ? handleBotRequest(
         request,
