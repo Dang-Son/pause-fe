@@ -1,3 +1,5 @@
+import NewTrack from "./component/NewTrack";
+
 function Sidebar() {
   return (
     <div className="right-side">
@@ -28,11 +30,7 @@ function Sidebar() {
               <div className="title">Title</div>
             </li>
             <li>
-              <div className="avatar">
-                <div className="avatar-nt"></div>
-                <i></i>
-              </div>
-              <div className="title">Title</div>
+              <NewTrack />
             </li>
             <li>
               <div className="avatar">
